@@ -57,6 +57,10 @@ class Organization(models.Model):
     guidestar_url = models.CharField(max_length = 200, default='', blank=True)
     logo_url = models.CharField(max_length = 200, default='https://www.resetyourbody.com/wp-content/uploads/COMPANY_LOGO/logo-default.png', blank='True')
     #video_url TODO ICE BOX
+    # facebook_url = models.CharField(max_length=200)
+    # twitter_url = models.CharField(max_length=200)
+    # instagram_url = models.CharField(max_length=200)
+
     description = models.TextField(max_length=500, verbose_name='about us')
     mission_statement = models.TextField(max_length=500, verbose_name='mission statement')
     verified = models.BooleanField(default=False)

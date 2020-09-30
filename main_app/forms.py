@@ -12,7 +12,7 @@ class OrganizationForm(ModelForm):
         fields = [
             'name', 'ein', 'address', 'city', 
             'state', 'zip_code', 'phone','contact_email','website_url', 'category',
-            'fiscal_sponsor','guidestar_url', 'logo_url','mission_statement', 'description',
+            'fiscal_sponsor','guidestar_url', 'logo_url', 'mission_statement', 'description',
         ]
 
 class DonationForm(ModelForm):
