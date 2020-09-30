@@ -6,9 +6,9 @@ Donors share a passion for the mission of the organizations they support and bui
 
 ## **The Team**
 
-- **Skyler Seifert**, Coding Ninja
-- **Jose Rodriguez**, Full Stack Jedi
-- **Eric Moore**, The Wise One
+- **Skyler Seifert**, Full Stack Dev, Database Manager (Coding Ninja)
+- **Jose Rodriguez**, Designer, Github Manager (Full Stack Jedi)
+- **Eric Moore**, Scrum Master, Documenter (The Wise One)
 
 ## **Technologies Used**
 
@@ -27,6 +27,11 @@ The technologies used to create Donor Adviser include:
 
 [Click here](Http://donoradvisor.herokuapp.com) to visit Donor Adviser
 
+## **Images**
+![Image1](https://i.imgur.com/9nykD2Y.png)
+![Image2](https://i.imgur.com/Q1xFikn.png)
+![Image3](https://i.imgur.com/uOIX5fb.png)
+
 ## **Resources**
 
 [Wireframe](https://donor-adviser.s3-us-west-1.amazonaws.com/Donor+Adviser+Wireframe.pdf),
@@ -39,3 +44,5 @@ For future versions, we will include the following features:
 
 1. Paid memberships for organizations
 2. Multiple authorized users for organizations
+3. Sign up for a newsletter
+4. Implement google auth
