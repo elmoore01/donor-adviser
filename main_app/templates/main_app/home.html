@@ -14,7 +14,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="container-fluid p-0 m-0 w-100" style="height:80vh;background:url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center fixed; background-size: cover;">
+        <div class="container-fluid p-0 m-0 w-100" style="height:80vh;background:url('https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center fixed; background-size: cover;">
         </div>
       </div>
       <div class="carousel-item">
@@ -22,11 +22,11 @@
         </div>
       </div>
       <div class="carousel-item">
-        <div class="container-fluid p-0 m-0 w-100" style="height:80vh;background:url('https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center fixed; background-size: cover;">
+        <div class="container-fluid p-0 m-0 w-100" style="height:80vh;background:url('https://images.unsplash.com/photo-1537539305875-d15d17683401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80') no-repeat center fixed; background-size: cover;">
         </div>
       </div>
       <div class="carousel-item">
-        <div class="container-fluid p-0 m-0 w-100" style="height:80vh;background:url('https://images.unsplash.com/photo-1537539305875-d15d17683401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80') no-repeat center fixed; background-size: cover;">
+       <div class="container-fluid p-0 m-0 w-100" style="height:80vh;background:url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center fixed; background-size: cover;">
         </div>
       </div>
       <div class="carousel-item">
@@ -38,7 +38,7 @@
 </div>
 <div class="position-relative" style="top: -200px">
   <div class="container text-center text-lg-left">
-    <h1 class="display-3 font-weight-bold text-light " style="text-shadow: 3px 3px #ff1010; font-size: min(max(50px, 5vw), 500px)">Find Nonprofits</h1>
+    <h1 class="display-3 font-weight-bold text-light " font-size: min(max(50px, 5vw), 500px)">Find Nonprofits</h1>
   </div>
   {% include 'base_search.html' %}
 </div>
@@ -67,7 +67,7 @@
         <p class="card-text">{{org.mission_statement}}</p>
       </div>
       <div class="card-footer">
-        <a href="{% url 'org_details' org.id%}" class="btn btn-block btn-primary btn-md">Read more</a>
+        <a href="{% url 'org_details' org.id%}" class="btn btn-block btn-info btn-md">Read more</a>
       </div>
     </div>
   </div>

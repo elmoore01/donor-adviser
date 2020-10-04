@@ -11,7 +11,7 @@
                     <form method="POST" action="" class="form-validate">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <button class="btn btn-lg btn-block btn-primary">Update Organization</button>
+                        <button class="btn btn-lg btn-block btn-info">Update Organization</button>
                         <input type="hidden" name="next" value="{{ next }}">
                     </form>
                     <hr>

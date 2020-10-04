@@ -15,11 +15,11 @@
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-6">
                     <img src="{{org.logo_url}}" alt="..." class="img-thumbnail center d-sm-none d-xs-block" style="width: 15vw; max-width: 200px; min-width: 100px;">
-                    <h5>{{org.name}} </i>{% if org.verified %} <span class="badge badge-primary">Verified</span> {% else %} <span class="badge badge-danger">Not Verified</span> {% endif %}</h5>
-                    <p>{{org.get_category_display}}</p>
+                    <h5>{{org.name}} </i>{% if org.verified %} <span class="badge badge-info">Verified</span> {% else %} <span class="badge badge-danger">Not Verified</span> {% endif %}</h5>
+                    <p>Category: {{org.get_category_display}}</p>
                     <p><span class="font-weight-bold">{{org.city}}</span>, {{org.state}} | <span class="font-weight-bold">EIN</span>: {{org.ein}}</p>
                     <p class="font-italic">{{org.mission_statement}}</p>
-                    <a href="{% url 'org_details' org.id %}" class="btn btn-outline-primary">Read More</a>
+                    <a href="{% url 'org_details' org.id %}" class="btn btn-info">Read More</a>
                 </div>
                 <div class="col-3 d-none d-md-block">
                     <div class="list-group">
@@ -50,7 +50,7 @@
         {% empty %}
             <div class="container mx-auto pl-5">
                 <h3>No results found :(</h3>
-                <a href="{% url 'org_results' %}" class="btn btn-primary">View All</a>
+                <a href="{% url 'org_results' %}" class="btn btn-info">View All</a>
             </div>
         {% endfor %}
     </div>

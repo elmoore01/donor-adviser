@@ -11,9 +11,11 @@ class OrganizationForm(ModelForm):
         }
         fields = [
             'name', 'ein', 'address', 'city', 
-            'state', 'zip_code', 'phone','contact_email','website_url', 'category',
+            'state', 'zip_code', 'phone','contact_name', 'contact_email', 'website_url', 'category',
             'fiscal_sponsor','guidestar_url', 'logo_url', 'mission_statement', 'description',
         ]
+
+    # Add 'contact_name', 'facebook_url', 'twitter_url', 'instagram_url'
 
 class DonationForm(ModelForm):
     class Meta:
@@ -30,4 +32,4 @@ class BoardMemberForm(ModelForm):
         labels = {
             'member': 'Full Name',
         }
-        fields = ['member','email', 'company', 'title']
+        fields = ['member', 'company', 'title']
