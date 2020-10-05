@@ -21,10 +21,12 @@ def contact_page(request):
 def about_page(request):
     return render(request, 'main_app/about.html')
 
+def pricing_page(request):
+    return render(request, 'main_app/pricing.html')
+
 class OrganizationDetailView(DetailView):
     model = Organization
     template_name = 'main_app/organizations/details.html'
-
 
 class OrganizationResultsView(ListView):
     model = Organization

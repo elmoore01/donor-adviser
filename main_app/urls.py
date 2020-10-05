@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.home_page, name='home'),
     path('about/', views.about_page, name='about'),
     path('contact/', views.contact_page, name='contact'),
+    path('pricing/', views.pricing_page, name='pricing'),
 
     # ORGANIZATIONS
     path('organizations/', views.OrganizationResultsView.as_view(), name='org_results'),
