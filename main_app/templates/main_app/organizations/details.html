@@ -10,7 +10,7 @@
                 <img src="{{organization.logo_url}}" alt="..." class="img-thumbnail mx-auto d-md-none d-sm-block" style="width: 200px;">
                 <h5>{{organization.get_category_display}}</h5>
                 <h1>{{organization.name}}</h1>
-                <p><span class="font-weight-bold">{{organization.city}}</span>, {{organization.state}}&ThickSpace; | &ThickSpace;<a class="text-dark" href="{{organization.website_url}}">{{organization.website_url}}</a>&ThickSpace; | &ThickSpace;<a href="{% url 'org_donate_create' organization.id %}" class="btn btn-warning">Donate</a>{% if user == organization.user %}&ThickSpace; | &ThickSpace;<a href="{% url 'org_update' organization.id%}" class="btn btn-secondary">Update Organization</a> {% endif %}</p>
+                <p><span class="font-weight-bold">{{organization.city}}</span>, {{organization.state}}&ThickSpace; | &ThickSpace;{{organization.website_url}}&ThickSpace; | &ThickSpace;<a href="{% url 'org_donate_create' organization.id %}" class="btn btn-warning">Donate</a>{% if user == organization.user %}&ThickSpace; | &ThickSpace;<a href="{% url 'org_update' organization.id%}" class="btn btn-secondary">Update Organization</a> {% endif %}</p>
             </div>
 
         </div>
@@ -92,7 +92,7 @@
                     <div class="d-flex w-100 justify-content-between">
                         <p class="mb-1 font-weight-bold">Contact</p>
                     </div>
-                    <p class="mb-1 font-italic">{{organization.contact_name}}</p>
+                    <p class="mb-1 font-italic">{{organization.contact_name}}, {{organization.contact_title}}</p>
                     <p class="mb-1 font-italic"><i class="fas fa-envelope"></i> <a href="mailto::{{organization.contact_email}}">{{organization.contact_email}}</a></p>
                     <p class="mb-1 font-italic"><i class="fas fa-phone"></i> {{organization.phone}}</p>
                 </div>

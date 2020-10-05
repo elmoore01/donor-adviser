@@ -10,12 +10,11 @@ class OrganizationForm(ModelForm):
             'mission_statement': 'Mission Statement'
         }
         fields = [
-            'name', 'ein', 'address', 'city', 
-            'state', 'zip_code', 'phone','contact_name', 'contact_email', 'website_url', 'category',
-            'fiscal_sponsor','guidestar_url', 'logo_url', 'mission_statement', 'description',
+            'name', 'fiscal_sponsor', 'ein', 'contact_name', 'contact_title', 'contact_email', 'address', 'city', 
+            'state', 'zip_code', 'phone', 'website_url', 'category', 'guidestar_url', 'logo_url', 'mission_statement', 'description',
         ]
 
-    # Add 'contact_name', 'facebook_url', 'twitter_url', 'instagram_url'
+    # Add 'facebook_url', 'twitter_url', 'instagram_url'
 
 class DonationForm(ModelForm):
     class Meta:

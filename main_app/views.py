@@ -53,12 +53,9 @@ class OrganizationUpdateView(LoginRequiredMixin, UpdateView):
     model = Organization
     template_name = 'main_app/organizations/update.html'
     fields = [
-        'name', 'ein', 'address', 'city', 
-        'state', 'zip_code', 'phone', 'contact_name', 'contact_email', 'website_url', 'category',
-        'fiscal_sponsor','guidestar_url', 'logo_url', 'mission_statement', 'description',
+            'name', 'fiscal_sponsor', 'ein', 'contact_name', 'contact_title', 'contact_email', 'address', 'city', 
+            'state', 'zip_code', 'phone', 'website_url', 'category', 'guidestar_url', 'logo_url', 'mission_statement', 'description',
     ]
-
-# Add 'contact_name',
 
 @login_required
 def organization_delete(request, pk):

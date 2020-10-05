@@ -6,6 +6,9 @@ from django import forms
 class RegisterForm(UserCreationForm):
     class Meta:
         model = get_user_model()
+        labels = {
+            'password1': 'Test'
+        }
         fields = ('username', 'email', 'first_name', 'last_name',  'password1', 'password2')
 
 

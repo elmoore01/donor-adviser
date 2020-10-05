@@ -29,10 +29,10 @@ STATES = (
 
 CATAGORIES = (
     ('AG', 'Aging'),('AF', 'Agriculture and Food'),('AC', 'Arts and Culture'),
-    ('AS', 'Athletics and Sports'),('CY', 'Children and Youth'),('AF', '• After School'), ('CS', 'Civil Society'),
+    ('AS', 'Athletics and Sports'),('CY', 'Children and Youth'),('AF', 'After School'), ('CS', 'Civil Society'),
     ('CE', 'Community and Economic Development'),('CT', 'Computers and Technology'),('CP', 'Consumer Protection'),
     ('CR', 'Crime and Safety'),('DI', 'Disabilities'),('DO', 'Domestic Violence Prevention'),
-    ('EL', 'Education and Literacy'), ('K2', '• K - 12'), ('HE', '• Higher Education'), ('CR', '• Career Preparation'), ('AE', '• Adult Education'),('EM', 'Employment and Labor'),('EE', 'Energy and Environment'),
+    ('EL', 'Education and Literacy'), ('K2', 'K 12'), ('HE', 'Higher Education'), ('CR', 'Career Preparation'), ('AE', 'Adult Education'),('EM', 'Employment and Labor'),('EE', 'Energy and Environment'),
     ('LI', 'LGBTQ+'),('GR', 'Government Reform'),('HW', 'Health and Wellness'),
     ('HO', 'Housing and Homelessness'),('HR', 'Human Rights and Civil Liberties'),('HU', 'Hunger'),
     ('IM', 'Immigration'),('JM', 'Journalism and Media'),('MB', 'Men and Boys'),
@@ -45,6 +45,7 @@ CATAGORIES = (
 class Organization(models.Model):
     name = models.CharField(max_length=200)
     contact_name = models.CharField(max_length=200)
+    contact_title = models.CharField(max_length=200)
     contact_email = models.EmailField(_('email address'))
     address = models.CharField(max_length=200)
     city =  models.CharField(max_length=50)
@@ -58,9 +59,6 @@ class Organization(models.Model):
     guidestar_url = models.CharField(max_length = 200, default='', blank=True)
     logo_url = models.CharField(max_length = 200, default='https://www.resetyourbody.com/wp-content/uploads/COMPANY_LOGO/logo-default.png', blank='True')
     #video_url TODO ICE BOX
-    # facebook_url = models.CharField(max_length=200)
-    # twitter_url = models.CharField(max_length=200)
-    # instagram_url = models.CharField(max_length=200)
 
     description = models.TextField(max_length=500, verbose_name='about us')
     mission_statement = models.TextField(max_length=500, verbose_name='mission statement')
@@ -76,6 +74,11 @@ class Organization(models.Model):
     def get_donations(self):
         return self.donation_set.all().order_by('-id')[:8]
 
+# class SocialMedia(model.Model):
+#     facebook_url = models.CharField(max_length=200)
+#     twitter_url = models.CharField(max_length=200)
+#     instagram_url = models.CharField(max_length=200)
+    
 class BoardMember(models.Model):
     member = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
