@@ -18,6 +18,9 @@ def home_page(request):
 def contact_page(request):
     return render(request, 'main_app/contact.html')
 
+def about_page(request):
+    return render(request, 'main_app/about.html')
+
 class OrganizationDetailView(DetailView):
     model = Organization
     template_name = 'main_app/organizations/details.html'
