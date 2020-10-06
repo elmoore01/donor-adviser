@@ -48,7 +48,7 @@
         <hr>
         <h2 class="font-italic pt-2 pb-2">About Us</h2>
         <h5 class="font-weight-normal pt-2 pb-2">{{organization.description}}</h5>
-        <h5 class="font-weight-normal font-italic pt-2 pb-2">Learn More ...</h5>
+        <h5 class="btn btn-info pt-2 mb-2">Learn More</h5>
         <hr>
         <h2 class="font-italic pt-2 pb-2" id="details">Gallery</h2>
         {% if user == organization.user %}
@@ -110,6 +110,15 @@
                     {% if organization.guidestar_url %}
                     <p class="mb-1 font-italic"><a target="_blank" href="{{organization.guidestar_url}}">Guide Star</a></p>
                     {%endif%}
+                    {% comment %} {% if organization.facebook_url %}
+                    <p class="mb-1 font-italic"><a target="_blank" href="{{organization.facebook_url}}">Facebook</a></p>
+                    {%endif%}
+                    {% if organization.twitter_url %}
+                    <p class="mb-1 font-italic"><a target="_blank" href="{{organization.twitter_url}}">Twitter</a></p>
+                    {%endif%}
+                    {% if organization.instagram_url %}
+                    <p class="mb-1 font-italic"><a target="_blank" href="{{organization.instagram_url}}">Instagram</a></p>
+                    {%endif%} {% endcomment %}
                 </div>
                 <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">

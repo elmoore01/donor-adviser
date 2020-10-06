@@ -62,6 +62,9 @@ class OrganizationUpdateView(LoginRequiredMixin, UpdateView):
             'state', 'zip_code', 'phone', 'website_url', 'category', 'guidestar_url', 'logo_url', 'mission_statement', 'description',
     ]
 
+# def org_about(request):
+#     return render(request, 'main_app/organizations/about.html')
+
 @login_required
 def organization_delete(request, pk):
     org = Organization.objects.get(id=pk)

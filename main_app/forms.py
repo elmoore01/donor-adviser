@@ -14,8 +14,6 @@ class OrganizationForm(ModelForm):
             'state', 'zip_code', 'phone', 'website_url', 'category', 'guidestar_url', 'logo_url', 'mission_statement', 'description',
         ]
 
-    # Add 'facebook_url', 'twitter_url', 'instagram_url'
-
 class DonationForm(ModelForm):
     class Meta:
         model = Donation

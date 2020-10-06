@@ -15,6 +15,7 @@ urlpatterns = [
     path('organizations/<int:pk>/', views.OrganizationDetailView.as_view(), name='org_details'),
     path('organizations/<int:pk>/settings/', views.OrganizationUpdateView.as_view(), name='org_update'),
     path('organizations/<int:pk>/delete/', views.organization_delete, name='org_delete'),
+    # path('organizations/<int:pk>/about/', views.organization_about, name='org_about'),
 
     #REVIEWS
     path('organizations/<int:pk>/reviews/create/', views.org_review_create, name='org_review_create'),

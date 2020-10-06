@@ -63,6 +63,11 @@ class Organization(models.Model):
     mission_statement = models.TextField(max_length=500, verbose_name='mission statement')
     verified = models.BooleanField(default=False)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    
+# class SocialMedia(models.Model):
+    # facebook_url = models.CharField(max_length=200)
+    # twitter_url = models.CharField(max_length=200)
+    # instagram_url = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
@@ -73,11 +78,6 @@ class Organization(models.Model):
     def get_donations(self):
         return self.donation_set.all().order_by('-id')[:8]
 
-# class SocialMedia(model.Model):
-#     facebook_url = models.CharField(max_length=200)
-#     twitter_url = models.CharField(max_length=200)
-#     instagram_url = models.CharField(max_length=200)
-    
 class BoardMember(models.Model):
     member = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
