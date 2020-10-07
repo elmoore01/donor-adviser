@@ -36,7 +36,7 @@ CATAGORIES = (
     ('LI', 'LGBTQ+'),('GR', 'Government Reform'),('HW', 'Health and Wellness'),
     ('HO', 'Housing and Homelessness'),('HR', 'Human Rights and Civil Liberties'),('HU', 'Hunger'),
     ('IM', 'Immigration'),('JM', 'Journalism and Media'),('MB', 'Men and Boys'),
-    ('NP', 'Nonprofit Empowerment'),('EC', 'Executive Coaching'), ('BD', 'Board Development'), ('PF', 'Parenting and Families'),('PO', 'Poverty'),
+    ('NP', 'Nonprofit Empowerment'),('EC', 'Executive Coaching'), ('BD', 'Board Development'), ('FS' 'Fiscal Sponsor'), ('PF', 'Parenting and Families'),('PO', 'Poverty'),
     ('PJ', 'Prison and Judicial Reform'),('RE', 'Race and Ethnicity'),('RI', 'Religion'),
     ('SC', 'Science, Technology, Engineering and Math'),('SA', 'Substance Abuse and Recovery'),('TR', 'Transportation'),
     ('WE', 'Welfare and Public Assistance'),('WG', 'Women and Girls')

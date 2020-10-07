@@ -48,7 +48,8 @@
         <hr>
         <h2 class="font-italic pt-2 pb-2">About Us</h2>
         <h5 class="font-weight-normal pt-2 pb-2">{{organization.description}}</h5>
-        <a class="btn btn-sm btn-info" href="{% url 'main_app/organizations/about.html' organization.id %}">Learn More</a>
+        <p class="btn btn-sm btn-info">Learn More</p>
+        {% comment %} href="{% url 'main_app/organizations/about.html' organization.id %}" {% endcomment %}
         <hr>
         <h2 class="font-italic pt-2 pb-2" id="details">Gallery</h2>
         {% if user == organization.user %}
@@ -122,7 +123,7 @@
                 </div>
                 <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
-                        <p class="mb-1 font-weight-bold">Board Members {% if organization.user == user%}<a class="btn btn-sm btn-info" href="{% url 'org_members_view' organization.id %}">Edit Members</a>{% endif %}</p>
+                        <p class="mb-1 font-weight-bold">Board Members <a class="btn btn-sm btn-info" href="{% url 'org_members_view' organization.id %}">View All</a> {% if organization.user == user%}<a class="btn btn-sm btn-info" href="{% url 'org_members_view' organization.id %}">Edit Members</a>{% endif %}</p>
                     </div>
                     <div class="carousel slide" id="boardMember" data-ride="carousel">
                         <div class="carousel-inner">
