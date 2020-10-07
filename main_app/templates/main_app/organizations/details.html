@@ -48,7 +48,7 @@
         <hr>
         <h2 class="font-italic pt-2 pb-2">About Us</h2>
         <h5 class="font-weight-normal pt-2 pb-2">{{organization.description}}</h5>
-        <h5 class="btn btn-info pt-2 mb-2">Learn More</h5>
+        <a class="btn btn-sm btn-info" href="{% url 'main_app/organizations/about.html' organization.id %}">Learn More</a>
         <hr>
         <h2 class="font-italic pt-2 pb-2" id="details">Gallery</h2>
         {% if user == organization.user %}
