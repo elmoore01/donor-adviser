@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% include 'base_search.html' %}
 <div class="row">
     <div class="col-12">
         <div class="row bg-light pb-1">
@@ -22,6 +23,7 @@
         <a class="btn btn-info rounded-0 font-italic" href="#reviews"></a>
     </div>
     <div class="col-3 d-none d-md-block border-right border-danger mx-auto bg-light">
+                    <h3 class="pt-3 pb-2">Donations</h3>
         <div class="list-group">
         {% for donation in organization.get_donations %}
             <div class="row">
@@ -43,15 +45,15 @@
         </div>
     </div>
     <div class="col-sm-8 col-md-5">
-        <h2 class="font-italic pt-2 pb-2">Mission</h2>
-        <h5 class="font-weight-normal pb-2 pt-2" id="description">{{organization.mission_statement}}</h5>
+        <h3 class="pt-3 pb-2">Mission</h3>
+        <h6 class="font-weight-normal pb-2 pt-2" id="description">{{organization.mission_statement}}</h6>
         <hr>
-        <h2 class="font-italic pt-2 pb-2">About Us</h2>
-        <h5 class="font-weight-normal pt-2 pb-2">{{organization.description}}</h5>
+        <h3 class="pt-2 pb-2">About Us</h3>
+        <h6 class="font-weight-normal pt-2 pb-2">{{organization.description}}</h6>
         <p class="btn btn-sm btn-info">Learn More</p>
-        {% comment %} href="{% url 'main_app/organizations/about.html' organization.id %}" {% endcomment %}
+        {% comment %} <a href="{% url 'org_about_view' organization.id %}"></a> {% endcomment %}
         <hr>
-        <h2 class="font-italic pt-2 pb-2" id="details">Gallery</h2>
+        <h3 class="pt-2 pb-2" id="details">Gallery</h3>
         {% if user == organization.user %}
         <form action="{% url 'org_gallery_create' organization.id %}" method="POST" class="form-inline">
             {% csrf_token %}
@@ -68,7 +70,7 @@
                 {% endif %}
             </div>
             {% empty %}
-            <h5 class="font-weight-normal pt-2 pb-2">No gallery uploaded</h5>
+            <h6 class="font-weight-normal pt-2 pb-2">No gallery uploaded</h6>
             {% endfor %}
         </div>
     </div>
@@ -147,7 +149,7 @@
 <div class="row" id="reviews">
     <div class="col-12 border-top border-danger bg-light pb-3">
         <div class="container">
-            <h2 class="font-italic pt-2">Reviews</h2>
+            <h3 class="pt-2">Reviews</h3>
             {% if user.is_authenticated %}
             {% if user.is_partial_complete %}
                 <form action="{% url 'org_review_create' organization.id %}" method="POST">

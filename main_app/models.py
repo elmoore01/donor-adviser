@@ -28,11 +28,11 @@ STATES = (
 )
 
 CATAGORIES = (
-    ('AG', 'Aging'),('AF', 'Agriculture and Food'),('AC', 'Arts and Culture'),
+    ('AG', 'Aging'),('AF', 'Agriculture and Food'), ('AR', 'Animal Rights'), ('AC', 'Arts and Culture'),
     ('AS', 'Athletics and Sports'),('CY', 'Children and Youth'),('AF', 'After School'), ('SU', 'Summer Activities'), ('CS', 'Civil Society'),
     ('CE', 'Community and Economic Development'),('CT', 'Computers and Technology'),('CP', 'Consumer Protection'),
     ('CR', 'Crime and Safety'),('DI', 'Disabilities'),('DO', 'Domestic Violence Prevention'),
-    ('EL', 'Education and Literacy'), ('K2', 'K 12'), ('HE', 'Higher Education'), ('CR', 'Career Preparation'), ('AE', 'Adult Education'),('EM', 'Employment and Labor'),('EE', 'Energy and Environment'),
+    ('EL', 'Education and Literacy'), ('K2', 'K 12'), ('HE', 'Higher Education'), ('CA', 'Career Preparation'), ('AE', 'Adult Education'),('EM', 'Employment and Labor'),('EE', 'Energy and Environment'),
     ('LI', 'LGBTQ+'),('GR', 'Government Reform'),('HW', 'Health and Wellness'),
     ('HO', 'Housing and Homelessness'),('HR', 'Human Rights and Civil Liberties'),('HU', 'Hunger'),
     ('IM', 'Immigration'),('JM', 'Journalism and Media'),('MB', 'Men and Boys'),
