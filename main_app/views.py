@@ -24,6 +24,9 @@ def about_page(request):
 def pricing_page(request):
     return render(request, 'main_app/pricing.html')
 
+def why_page(request):
+    return render(request, 'main_app/why.html')
+
 class OrganizationDetailView(DetailView):
     model = Organization
     template_name = 'main_app/organizations/details.html'

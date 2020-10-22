@@ -29,17 +29,19 @@ STATES = (
 
 CATAGORIES = (
     ('AG', 'Aging'),('AF', 'Agriculture and Food'), ('AR', 'Animal Rights'), ('AC', 'Arts and Culture'),
-    ('AS', 'Athletics and Sports'),('CY', 'Children and Youth'),('AF', 'After School'), ('SU', 'Summer Activities'), ('CS', 'Civil Society'),
-    ('CE', 'Community and Economic Development'),('CT', 'Computers and Technology'),('CP', 'Consumer Protection'),
+    ('AS', 'Athletics and Sports'),('CY', 'Children and Youth'),('AF', 'After School'), ('SU', 'Summer Activities'), ('CI', 'Civil Rights'),
+    ('CE', 'Community and Economic Development'),('CT', 'Computers and Technology'),('CP', 'Consumer Protection'), ('CV', 'Coronavirus (COVID-19)'),
     ('CR', 'Crime and Safety'),('DI', 'Disabilities'),('DO', 'Domestic Violence Prevention'),
     ('EL', 'Education and Literacy'), ('K2', 'K 12'), ('HE', 'Higher Education'), ('CA', 'Career Preparation'), ('AE', 'Adult Education'),('EM', 'Employment and Labor'),('EE', 'Energy and Environment'),
-    ('LI', 'LGBTQ+'),('GR', 'Government Reform'),('HW', 'Health and Wellness'),
-    ('HO', 'Housing and Homelessness'),('HR', 'Human Rights and Civil Liberties'),('HU', 'Hunger'),
-    ('IM', 'Immigration'),('JM', 'Journalism and Media'),('MB', 'Men and Boys'),
-    ('NP', 'Nonprofit Empowerment'),('EC', 'Executive Coaching'), ('BD', 'Board Development'), ('FS', 'Fiscal Sponsor'), ('PF', 'Parenting and Families'),('PO', 'Poverty'),
-    ('PJ', 'Prison and Judicial Reform'),('RE', 'Race and Ethnicity'),('RI', 'Religion'),
-    ('SC', 'Science, Technology, Engineering and Math'),('SA', 'Substance Abuse and Recovery'),('TR', 'Transportation'),
-    ('WE', 'Welfare and Public Assistance'),('WG', 'Women and Girls')
+    ('LI', 'LGBTQ+'),('GR', 'Government Reform'), ('GC', 'Gun Control'), ('HW', 'Health and Wellness'), ('AI', 'AIDS'), ('CN', 'Cancer'), ('CO', 'Childhood Obesity'), ('MH', 'Mental Health'),
+    ('HO', 'Housing and Homelessness'),('HR', 'Human Rights and Civil Liberties'),('HU', 'Hunger'), ('IM', 'Immigration'),('JM', 'Journalism and Media'),('MB', 'Men and Boys'),
+    ('NP', 'Nonprofit Empowerment'),('EC', 'Executive Coaching'), ('BD', 'Board Development'), ('FS', 'Fiscal Sponsors'), ('PF', 'Parenting and Families'),('PO', 'Poverty'),
+    ('PJ', 'Prison and Judicial Reform'),('RE', 'Race and Ethnicity'),('RI', 'Religion'), ('ST', 'STEM'),('SA', 'Substance Abuse and Recovery'), ('TR', 'Transportation'), 
+    ('VT', 'Veterans'), ('VO', 'Voting Rights'), ('WA', 'Water'), ('WE', 'Welfare and Public Assistance'),('WG', 'Women and Girls')
+)
+
+REVIEWERS = (
+    ('DO', 'Donor'), ('BM', 'Board Member'), ('CL', 'Client'), ('SU', 'Supporter')
 )
 
 class Organization(models.Model):
