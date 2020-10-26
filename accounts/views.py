@@ -14,7 +14,7 @@ from .forms import LoginForm, RegisterForm
 from .models import CustomUser
 
 S3_BASE_URL = 'https://s3.us-west-1.amazonaws.com/'
-BUCKET = 'donoradviser'
+BUCKET = 'lifeprep-academy'
 
 # Create your views here.
 class AccountLoginView(LoginView):

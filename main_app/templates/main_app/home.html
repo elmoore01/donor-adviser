@@ -5,84 +5,123 @@
 <div class="container-fluid p-0 m-0 w-100" style="height: 50vh;">
   <div id="carouselHomePage" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <ol>
       <li data-target="#carouselHomePage" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselHomePage" data-slide-to="1"></li>
-      <li data-target="#carouselHomePage" data-slide-to="2"></li>
-      <li data-target="#carouselHomePage" data-slide-to="3"></li>
-      <li data-target="#carouselHomePage" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="container-fluid p-0 m-0 w-100" style="height:75vh;background:url('https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center fixed; background-size: cover;">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="container-fluid p-0 m-0 w-100" style="height:75vh;background:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center fixed; background-size: cover;">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="container-fluid p-0 m-0 w-100" style="height:75vh;background:url('https://images.unsplash.com/photo-1537539305875-d15d17683401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80') no-repeat center fixed; background-size: cover;">
-        </div>
-      </div>
-      <div class="carousel-item">
-       <div class="container-fluid p-0 m-0 w-100" style="height:75vh;background:url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center fixed; background-size: cover;">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="container-fluid p-0 m-0 w-100" style="height:75vh;background:url('https://images.pexels.com/photos/1904105/pexels-photo-1904105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center fixed; background-size: cover;">
+        <div class="container-fluid p-0 m-0 w-100" style="height:56vh;background:url('https://images.unsplash.com/photo-1537539305875-d15d17683401?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80') no-repeat center fixed; background-size: cover;">
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="position-relative" style="top: -150px">
-  <div class="container text-center text-lg-left">
-    <h1 class="display-3 font-weight-bold text-light " font-size: min(max(50px, 5vw), 500px)">Find Nonprofits</h1>
+<div class="position-relative" style="top: -400px">
+  <div class="text-left ml-4">
+    <h1 class="display-6 font-weight-normal text-light" font-size: min(max(50px, 5vw), 600px)">College, Career & Life Planning</h1>
   </div>
-  {% include 'base_search.html' %}
+
 </div>
 <!-- Heading -->
-  <div class="jumbotron jumbotron-fluid">
+      <br><br><br>
     <div class="container text-center">
-      <h2 class="display-4">What’s Your <span class="text-warning font-weight-bold">Passion</span>?</h2>
-      <p class="lead">Most people think of large foundations when they hear <span class="text-primary">philanthropy</span>, but individual donors are the lifeblood of the nonprofit sector.</p> 
+      <h2 class="display-4"><span class="text-warning">Empowering</span> Our Future Workforce</h2>
+      <hr>
+      <p class="lead text-left">The <span class="font-weight-bold">LifePrep Academy™ </span>College and Career Planning curriculum helps prepare youth for life after high school.</p> 
       <br>
-      <p class="lead">Donors share a passion for the mission of the organizations they support and build strong relationships with their leaders. Thus, almost two-thirds of nonprofit leaders say that they would prefer to receive more of their funding from individual donors.</p>
+      <p class="lead text-left">We teach <span class="text-warning font-weight-bold">students and their parents </span> the college knowledge, attitudes and skills students need to graduate from high school college-ready. 
+      Workshop participants learn academic planning strategies, college and career options, how to access internet-based resources, the types of financial aid available to them and more.</p>
     </div>
+    <br>
+    <br>
   </div>
-<!-- Featured orgs -->
-<!-- Card deck -->
-<h1 class="text-center font-weight-normal">Featured Organizations</h1>
-<hr>
-<div class="row d-flex flex-wrap mt-4 justify-content-center">
-  {% for org in featured %}
-  <div class="col-md-6 col-lg-4 col-sm-12">
-    <div class="card text-center h-100">
-      <div class="view overlay">
-        <img class="card-img-top" style="max-width: 180px;" src="{{org.logo_url}}" alt="Card image cap">
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">{{org.name}}</h4>
-        <h5 class="card-text font-weight-normal">{{org.city}}, {{org.state}}</h5>
-        <h5 class="card-text font-weight-normal">EIN: {{org.ein}}</h5>
-        <p class="card-text">{{org.mission_statement}}</p>
-      </div>
-      <div class="card-footer">
-        <a href="{% url 'org_details' org.id%}" class="btn btn-block btn-info btn-md">Read more</a>
-      </div>
-    </div>
-  </div>
-  {% empty %}
-  <h5 class="text-center">No organizations signed up :(</h5>
-  {% endfor %}
-</div>
-<br>
-  <div class="container text-center">
-    <h3 class="display-4">Stay<span class="text-warning font-weight-bold"> Informed</span></h3>
-    <h5>Enter Your Email to Receive Our Monthly Newsletter</h5><br>
-    <input type="email" size="40" placeholder="Your Email">  <input type="submit" class="btn btn-sm btn-info">
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h2 class="display-4 text-center">Engaging Parents and <span class="text-warning">Families</span></h2>
+          <hr>
+      <h2 class="lead text-center font-weight-bold">An effective solution to California's <span class="font-weight-bold text-danger"> more than 600:1</span> student-to-counselor ratio!</h2>
+      <br>
+      <p class="lead text-left">Through LifePrep Academy workshops and webinars, parents:</p> 
+ 
+  <p class="lead ml-4"> •	Learn how to help their child develop an academic plan for their college and career goals;
   <br>
+  <p class="lead ml-4">•	Gain confidence in their understanding on how they can help their child prepare for college, explore majors and research careers; and
+  </p>
+  <p class="lead ml-4">•	Are equipped for clear, high quality <span class="font-weight-bold">communication and collaboration</span> with school counselors.
+
+  </p>
+    </div>
+
+  </div>
+     <div class="d-flex justify-content-center row no-bullets lead text-left">
+        <img style="height: 40vh;" src="https://lifeprep-academy.s3-us-west-1.amazonaws.com/LifePrep-Site+Icon.jpg" alt="...">
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      
+      <ul class="no-bullets lead text-left"> 
+      <br>
+      <h2 class="text-center">LifePrep Academy Covers:</h2>
+      <br>
+
+        <li class"ml-4 list-inline-item"> 
+        <i > A-G Requirements, AP & Honors, Concurrent Classes</i>
+        <br><br>
+        <li class"list-inline-item"> 
+        <i> Financial Aid, Scholarships, Grants and Loans</i>
+        <br><br>
+        <li class"list-inline-item"> 
+        <i> UC, CSU, Community Colleges and Private Universities</i>
+        <br><br>
+        <li class"list-inline-item"> 
+        <i> Studying Abroad, Apprenticeships, School-to-Career</i>
+        <br><br>
+        <li class"list-inline-item"> 
+        <i> Career Exploration, Life Skills and much more.</i>
+       </li>
+      </ul>
+    </div>
+  </div>
+      <div class="w-75 mx-auto">
+        <img src="https://lifeprep-academy.s3-us-west-1.amazonaws.com/Quote_Marks-sm.jpg">
+      </div>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner justify-content-center w-75 mx-auto">
+    <div class="carousel-item active" data-interval="7000">
+        <br>
+        <p class="d-flex justify-content-center lead text-center">I am confident the LifePrep Academy program will assist high school students in navigating 
+        through the opportunities available and allow them to excel in universities, in their careers 
+        and in their communities.
+        <br><br>
+        <p class="d-flex justify-content-center font-weight-bold lead text-center">Assemblymember Reginald Jones-Sawyer, Sr.
+        <br>
+        California's 59th District, Chair-Committee on Ending School to Prison Pipeline</p>
+      
+    </div>
+    <div class="carousel-item" data-interval="7000">
+        <br>
+        <p class="d-flex justify-content-center lead text-center">Educate California has been a trusted partner with California State University for more 
+        than ten years, providing LifePrep Academy guides and trainings for our campuses and church partners.
+        <br><br>
+        <p class="d-flex justify-content-center font-weight-bold lead text-center">Maryann Jackmon
+        <br>
+        Senior Director of External Affairs, California State University Chancellor's Office</p>
+    </div>
+    <div class="carousel-item" data-interval="7000">
+        <br>
+        <p class="d-flex justify-content-center lead text-center">The LifePrep Academy has helped us walk families through the process of applying for 
+        college from A - Z. We annually invite Eric Moore to lead customized LifePrep workshops that educate our parents and high school students.
+        <br><br>
+        <p class="d-flex justify-content-center font-weight-bold lead text-center">Deacon John Wilson III
+        <br>
+        Education & Enrichment Director, West Angeles Church of God in Christ</p>
+    </div>
+  </div>
+    <br><br>
+</div>
+  <div class="jumbotron jumbotron-fluid text-center">
+    <h3 class="display-4">Stay<span class="text-warning"> Informed</span></h3>
+    <h5>Enter Your Email to Receive Our Monthly Newsletter</h5><br>
+    <input type="email" size="60" placeholder=" Your Email">  <input type="submit" class="btn btn-sm btn-info">
   <br>
   <br>
   </div>
